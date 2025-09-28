@@ -22,6 +22,11 @@ struct ContentView: View {
                     Text(wish.title)
                         .font(.title.weight(.light))
                         .padding(.vertical, 2)
+                        .swipeActions {
+                            Button("Delete", role: .destructive) {
+                                modelContext.delete(wish)
+                            }
+                        }
                 }
             }
             .navigationTitle("Wishlist")
