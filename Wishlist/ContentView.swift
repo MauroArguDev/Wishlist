@@ -39,7 +39,8 @@ struct ContentView: View {
                 TextField("Enter your wish", text: $title)
                 
                 Button {
-                    
+                    modelContext.insert(Wish(title: title))
+                    title = ""
                 } label : {
                     Text("Save")
                 }
