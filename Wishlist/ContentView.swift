@@ -10,6 +10,9 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
+    @State private var showNewWishAlert = false
+    @State private var title = ""
+    
     @Query private var wishList: [Wish]
     
     var body: some View {
@@ -22,6 +25,25 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Wishlist")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showNewWishAlert.toggle()
+                    } label: {
+                        Image(systemName: "plus")
+                            .imageScale(.large)
+                    }
+                }
+            }
+            .alert("Create a new wish", isPresented: $showNewWishAlert) {
+                TextField("Enter your wish", text: $title)
+                
+                Button {
+                    
+                } label : {
+                    Text("Save")
+                }
+            }
             .overlay {
                 if wishList.isEmpty {
                     ContentUnavailableView("My Wishlist", systemImage: "heart.circle", description: Text("No items yet. Add some to get started."))
