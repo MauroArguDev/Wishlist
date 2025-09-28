@@ -19,7 +19,12 @@ struct ContentView: View {
                     Text(wish.title)
                 }
             }
-            .navigationTitle("Wish List")
+            .navigationTitle("Wishlist")
+            .overlay {
+                if wishList.isEmpty {
+                    ContentUnavailableView("My Wishlist", systemImage: "heart.circle", description: Text("No items yet. Add some to get started."))
+                }
+            }
         }
     }
 }
