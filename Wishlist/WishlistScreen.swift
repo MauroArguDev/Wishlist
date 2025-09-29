@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  WishlistScreen.swift
 //  Wishlist
 //
 //  Created by Mauricio Argumedo on 27/9/25.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct WishlistScreen: View {
     @Environment(\.modelContext) private var modelContext
     @State private var showNewWishAlert = false
     @State private var title = ""
@@ -67,11 +67,11 @@ struct ContentView: View {
     container.mainContext.insert(Wish(title: "Get Married"))
     container.mainContext.insert(Wish(title: "Live in Nederland"))
     
-    return ContentView()
+    return WishlistScreen()
         .modelContainer(container)
 }
 
 #Preview("Empty List") {
-    ContentView()
+    WishlistScreen()
         .modelContainer(for: Wish.self, inMemory: true)
 }
