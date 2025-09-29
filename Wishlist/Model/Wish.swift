@@ -9,10 +9,12 @@ import Foundation
 import SwiftData
 
 @Model
-class Wish {
+final class Wish: Identifiable {
+    var id: UUID
     var title: String
     
-    init(title: String) {
+    init(id: UUID = UUID(), title: String) {
+        self.id = id
         self.title = title
     }
 }
