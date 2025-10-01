@@ -9,50 +9,41 @@ import SwiftUI
 import SwiftData
 
 struct WishlistScreen: View {
+    // MARK: - Properties
     @Environment(\.modelContext) private var modelContext
-    @State private var showNewWishAlert = false
-    @State private var title = ""
-    
+    @StateObject private var viewModel = WishlistViewModel()
     @Query private var wishList: [Wish]
     
+    // MARK: - Body
     var body: some View {
         NavigationStack {
             List {
                 ForEach(wishList) { wish in
-                    Text(wish.title)
-                        .font(.title.weight(.light))
-                        .padding(.vertical, 2)
-                        .swipeActions {
-                            Button("Delete", role: .destructive) {
-                                modelContext.delete(wish)
-                            }
-                        }
+                    WishRow(wish: wish) {
+                        viewModel.delete(wish, in: modelContext)
+                    }
                 }
             }
             .navigationTitle("Wishlist")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        showNewWishAlert.toggle()
+                        viewModel.showNewWishAlert.toggle()
                     } label: {
                         Image(systemName: "plus")
                             .imageScale(.large)
                     }
                 }
             }
-            .alert("Create a new wish", isPresented: $showNewWishAlert) {
-                TextField("Enter your wish", text: $title)
-                
-                Button {
-                    modelContext.insert(Wish(title: title))
-                    title = ""
-                } label : {
-                    Text("Save")
+            .alert("Create a new wish", isPresented: $viewModel.showNewWishAlert) {
+                TextField("Enter your wish", text: $viewModel.title)
+                Button("Save") {
+                    viewModel.addWish(in: modelContext)
                 }
             }
             .overlay {
                 if wishList.isEmpty {
-                    ContentUnavailableView("My Wishlist", systemImage: "heart.circle", description: Text("No items yet. Add some to get started."))
+                    EmptyStateView()
                 }
             }
         }
