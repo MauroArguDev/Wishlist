@@ -41,6 +41,11 @@ struct WishlistScreen: View {
                     viewModel.addWish(in: modelContext)
                 }
             }
+            .alert("Invalid Wish", isPresented: $viewModel.showEmptyTitleAlert) {
+                Button("Accept", role: .cancel) {}
+            } message: {
+                Text("You cannot add a wish with an empty title.")
+            }
             .overlay {
                 if wishList.isEmpty {
                     EmptyStateView()
