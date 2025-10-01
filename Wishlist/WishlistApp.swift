@@ -12,8 +12,8 @@ import SwiftData
 struct WishlistApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .modelContainer(for: Wish.self)
+            WishlistScreen()
+                .modelContainer(for: [Wish.self])
         }
     }
 }
