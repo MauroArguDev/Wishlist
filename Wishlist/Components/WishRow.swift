@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct WishRow: View {
-    
     // MARK: - Properties
     let wish: Wish
     let onDelete: () -> Void
@@ -16,7 +15,7 @@ struct WishRow: View {
     // MARK: - Body
     var body: some View {
         Text(wish.title)
-            .font(.title.weight(.light))
+            .font(.title2.weight(.light))
             .padding(.vertical, 2)
             .swipeActions {
                 Button("Delete", role: .destructive) {
