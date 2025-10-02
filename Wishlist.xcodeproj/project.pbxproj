@@ -6,11 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		6A8D501A2E8E2A4E007BD28A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AF5FCA22E88548000C9056D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AF5FCA92E88548000C9056D;
+			remoteInfo = Wishlist;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		6A8D50162E8E2A4E007BD28A /* WishlistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WishlistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF5FCAA2E88548000C9056D /* Wishlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wishlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		6A8D50172E8E2A4E007BD28A /* WishlistTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WishlistTests;
+			sourceTree = "<group>";
+		};
 		6AF5FCAC2E88548000C9056D /* Wishlist */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Wishlist;
@@ -19,6 +35,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6A8D50132E8E2A4E007BD28A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6AF5FCA72E88548000C9056D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				6AF5FCAC2E88548000C9056D /* Wishlist */,
+				6A8D50172E8E2A4E007BD28A /* WishlistTests */,
 				6AF5FCAB2E88548000C9056D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				6AF5FCAA2E88548000C9056D /* Wishlist.app */,
+				6A8D50162E8E2A4E007BD28A /* WishlistTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +73,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6A8D50152E8E2A4E007BD28A /* WishlistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A8D501E2E8E2A4E007BD28A /* Build configuration list for PBXNativeTarget "WishlistTests" */;
+			buildPhases = (
+				6A8D50122E8E2A4E007BD28A /* Sources */,
+				6A8D50132E8E2A4E007BD28A /* Frameworks */,
+				6A8D50142E8E2A4E007BD28A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A8D501B2E8E2A4E007BD28A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6A8D50172E8E2A4E007BD28A /* WishlistTests */,
+			);
+			name = WishlistTests;
+			packageProductDependencies = (
+			);
+			productName = WishlistTests;
+			productReference = 6A8D50162E8E2A4E007BD28A /* WishlistTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6AF5FCA92E88548000C9056D /* Wishlist */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AF5FCB52E88548100C9056D /* Build configuration list for PBXNativeTarget "Wishlist" */;
@@ -80,6 +128,10 @@
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
+					6A8D50152E8E2A4E007BD28A = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 6AF5FCA92E88548000C9056D;
+					};
 					6AF5FCA92E88548000C9056D = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
@@ -100,11 +152,19 @@
 			projectRoot = "";
 			targets = (
 				6AF5FCA92E88548000C9056D /* Wishlist */,
+				6A8D50152E8E2A4E007BD28A /* WishlistTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6A8D50142E8E2A4E007BD28A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6AF5FCA82E88548000C9056D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +175,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6A8D50122E8E2A4E007BD28A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6AF5FCA62E88548000C9056D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +191,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6A8D501B2E8E2A4E007BD28A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AF5FCA92E88548000C9056D /* Wishlist */;
+			targetProxy = 6A8D501A2E8E2A4E007BD28A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		6A8D501C2E8E2A4E007BD28A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRC983479Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.argudev.WishlistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wishlist.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wishlist";
+			};
+			name = Debug;
+		};
+		6A8D501D2E8E2A4E007BD28A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRC983479Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.argudev.WishlistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wishlist.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wishlist";
+			};
+			name = Release;
+		};
 		6AF5FCB32E88548100C9056D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -313,6 +430,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6A8D501E2E8E2A4E007BD28A /* Build configuration list for PBXNativeTarget "WishlistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A8D501C2E8E2A4E007BD28A /* Debug */,
+				6A8D501D2E8E2A4E007BD28A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6AF5FCA52E88548000C9056D /* Build configuration list for PBXProject "Wishlist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
