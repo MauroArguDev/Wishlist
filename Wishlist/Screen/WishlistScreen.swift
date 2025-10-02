@@ -24,7 +24,7 @@ struct WishlistScreen: View {
                     }
                 }
             }
-            .navigationTitle("Wishlist")
+            .navigationTitle("wishlist")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
@@ -35,16 +35,16 @@ struct WishlistScreen: View {
                     }
                 }
             }
-            .alert("Create a new wish", isPresented: $viewModel.showNewWishAlert) {
-                TextField("Enter your wish", text: $viewModel.title)
-                Button("Save") {
+            .alert("create_new_wish", isPresented: $viewModel.showNewWishAlert) {
+                TextField("enter_your_wish", text: $viewModel.title)
+                Button("save") {
                     viewModel.addWish(in: modelContext)
                 }
             }
-            .alert("Invalid Wish", isPresented: $viewModel.showEmptyTitleAlert) {
-                Button("Accept", role: .cancel) {}
+            .alert("invalid_wish", isPresented: $viewModel.showEmptyTitleAlert) {
+                Button("accept", role: .cancel) {}
             } message: {
-                Text("You cannot add a wish with an empty title.")
+                Text("cannot_save_empty_wish")
             }
             .overlay {
                 if wishList.isEmpty {
