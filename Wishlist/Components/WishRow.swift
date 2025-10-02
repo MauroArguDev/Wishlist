@@ -18,7 +18,7 @@ struct WishRow: View {
             .font(.title2.weight(.light))
             .padding(.vertical, 2)
             .swipeActions {
-                Button("Delete", role: .destructive) {
+                Button("delete", role: .destructive) {
                     onDelete()
                 }
             }

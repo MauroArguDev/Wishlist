@@ -18,10 +18,10 @@ struct EmptyStateView: View {
                 .frame(width: 80, height: 80)
                 .foregroundStyle(.red)
 
-            Text("My Wishlist")
+            Text("my_wish")
                 .font(.title.weight(.semibold))
 
-            Text("No items yet. Add some to get started.")
+            Text("no_items_yet")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
             
